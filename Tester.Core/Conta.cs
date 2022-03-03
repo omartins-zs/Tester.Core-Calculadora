@@ -15,6 +15,14 @@ namespace Tester.Core
         }
         public void Depositar(double valor)
         {
+            // adicionando condicao para valor do deposito menor ou igual a zero
+            if
+            (valor <= 0)
+            {
+                throw new
+                ArgumentOutOfRangeException(
+                "Valor do depósito não pode ser menor ou igual a zero.");
+            }
             Saldo += valor;
         }
     }
